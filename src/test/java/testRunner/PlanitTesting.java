@@ -55,8 +55,9 @@ public class PlanitTesting extends CommonMethod{
 		sp.buyProduct("Stuffed Frog",2);
 		sp.buyProduct("Fluffy Bunny",5);
 		sp.buyProduct("Valentine Bear",3);
-		
+		System.out.println("added info");
 		hp.CartBtn.click();
+		
 		
 	}
 	
