@@ -7,7 +7,7 @@
         <methods>
           <include name="getDriver"/>
           <include name="tearDown"/>
-          <include name="verifySuccessfulSubmissionMsg"/>
+          <include name="validateCartPage1"/>
         </methods>
       </class> <!-- testRunner.PlanitTesting -->
     </classes>

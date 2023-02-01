@@ -97,4 +97,29 @@ public class CommonMethod extends PageInitializer {
 		String text = (String) js.executeScript("return arguments[0].value", webelement);
 		return text;	}
 
+	
+	
+	public static byte[] takeScreenshot(String filename) {
+		TakesScreenshot ts = (TakesScreenshot) getDriver();
+		byte[] picBytes = ts.getScreenshotAs(OutputType.BYTES);
+
+		File file = ts.getScreenshotAs(OutputType.FILE);
+		String destinationFile = Constants.screenshot_filepath + filename + getTimeStemp() + ".png";
+
+		try {
+			FileUtils.copyFile(file, new File(destinationFile));
+		} catch (Exception ex) {
+			System.out.println("Cannot take screenshot!");
+		}
+		return picBytes;
+	}
+
+	public static String getTimeStemp() { 
+		
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+		return sdf.format(date.getTime());
+		
+	}
+
 }

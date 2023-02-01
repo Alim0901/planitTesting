@@ -13,6 +13,7 @@ import utilities.CommonMethod;
 public class ShopPage {
 
 	public ShopPage() {
+		
 		PageFactory.initElements(BaseClass.getDriver(), this);	}
 	
 	@FindBy(xpath="//*[@class='product-title ng-binding']")
