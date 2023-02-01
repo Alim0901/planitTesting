@@ -13,34 +13,45 @@ import utilities.CommonMethod;
 public class ShopPage {
 
 	public ShopPage() {
-		PageFactory.initElements(BaseClass.getDriver(), this);
-	}
+		PageFactory.initElements(BaseClass.getDriver(), this);	}
 	
 	@FindBy(xpath="//*[@class='product-title ng-binding']")
 	public  List<WebElement> productNameList;
-	ArrayList<WebElement> products=new ArrayList<>();
-	
-	@FindBy(xpath="//*[@class='btn btn-success']")
+		@FindBy(xpath="//*[@class='btn btn-success']")
 	public List<WebElement> BuyBtnList;
-	//ArrayList<WebElement> BuyBtns=new ArrayList<>();
 	
 	@FindBy(xpath="//*[@class='product-price ng-binding']")
 	public List<WebElement> PriceList;
 	
 	
 	
-	public  void buyProduct(String productName, int productCount) {
+	public  void buyProduct(String productName, int productQuantity) {
 		
 		for (int i=0;i<BuyBtnList.size();i++) {
-			//System.out.println(eachItem.getText());
 
 			if(productNameList.get(i).getText().contains(productName)) {
-				for(int j=0; j<productCount; j++) {
-				
+				for(int j=0; j<productQuantity; j++) {
+					
 					BuyBtnList.get(i).click();
+					
 				}
 			}
 		}
 		
 	}
+	
+	//h4[.='Stuffed Frog']/..//a
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

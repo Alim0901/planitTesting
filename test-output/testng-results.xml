@@ -2,92 +2,92 @@
 <testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-31T23:41:05 AEST" name="Suite" finished-at="2023-01-31T23:42:25 AEST" duration-ms="79403">
+  <suite started-at="2023-02-01T09:55:31 AEST" name="Suite" finished-at="2023-02-01T09:57:32 AEST" duration-ms="121350">
     <groups>
     </groups>
-    <test started-at="2023-01-31T23:41:05 AEST" name="Test" finished-at="2023-01-31T23:42:25 AEST" duration-ms="79403">
+    <test started-at="2023-02-01T09:55:31 AEST" name="Test" finished-at="2023-02-01T09:57:32 AEST" duration-ms="121350">
       <class name="testRunner.PlanitTesting">
-        <test-method is-config="true" signature="getDriver()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:41:06 AEST" name="getDriver" finished-at="2023-01-31T23:41:17 AEST" duration-ms="11697" status="PASS">
+        <test-method is-config="true" signature="getDriver()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:55:31 AEST" name="getDriver" finished-at="2023-02-01T09:55:45 AEST" duration-ms="13715" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method signature="validateCartPage()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:41:17 AEST" name="validateCartPage" finished-at="2023-01-31T23:41:21 AEST" duration-ms="3847" status="PASS">
+        <test-method signature="validateCartPage1()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:55:45 AEST" name="validateCartPage1" finished-at="2023-02-01T09:55:51 AEST" duration-ms="6310" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateCartPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:41:21 AEST" name="tearDown" finished-at="2023-01-31T23:41:22 AEST" duration-ms="448" status="PASS">
+        </test-method> <!-- validateCartPage1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:55:51 AEST" name="tearDown" finished-at="2023-02-01T09:55:51 AEST" duration-ms="563" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="getDriver()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:41:22 AEST" name="getDriver" finished-at="2023-01-31T23:41:29 AEST" duration-ms="7243" status="PASS">
+        <test-method is-config="true" signature="getDriver()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:55:51 AEST" name="getDriver" finished-at="2023-02-01T09:56:00 AEST" duration-ms="8565" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method signature="verifyErrorMessage()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:41:29 AEST" name="verifyErrorMessage" finished-at="2023-01-31T23:41:31 AEST" duration-ms="2189" status="PASS">
+        <test-method signature="verifyErrorMessage()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:56:00 AEST" name="verifyErrorMessage" finished-at="2023-02-01T09:56:03 AEST" duration-ms="2665" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyErrorMessage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:41:31 AEST" name="tearDown" finished-at="2023-01-31T23:41:32 AEST" duration-ms="599" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:56:03 AEST" name="tearDown" finished-at="2023-02-01T09:56:03 AEST" duration-ms="453" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="getDriver()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:41:32 AEST" name="getDriver" finished-at="2023-01-31T23:41:39 AEST" duration-ms="7019" status="PASS">
+        <test-method is-config="true" signature="getDriver()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:56:03 AEST" name="getDriver" finished-at="2023-02-01T09:56:11 AEST" duration-ms="7670" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method signature="verifySuccessfulSubmissionMsg()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:41:39 AEST" name="verifySuccessfulSubmissionMsg" finished-at="2023-01-31T23:41:42 AEST" duration-ms="3335" status="PASS">
+        <test-method signature="verifySuccessfulSubmissionMsg()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:56:11 AEST" name="verifySuccessfulSubmissionMsg" finished-at="2023-02-01T09:56:14 AEST" duration-ms="3023" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySuccessfulSubmissionMsg -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:41:42 AEST" name="tearDown" finished-at="2023-01-31T23:41:42 AEST" duration-ms="437" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:56:14 AEST" name="tearDown" finished-at="2023-02-01T09:56:14 AEST" duration-ms="441" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="getDriver()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:41:42 AEST" name="getDriver" finished-at="2023-01-31T23:41:49 AEST" duration-ms="6080" status="PASS">
+        <test-method is-config="true" signature="getDriver()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:56:14 AEST" name="getDriver" finished-at="2023-02-01T09:56:27 AEST" duration-ms="12411" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method signature="verifySuccessfulSubmissionMsg()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:41:49 AEST" name="verifySuccessfulSubmissionMsg" finished-at="2023-01-31T23:41:53 AEST" duration-ms="4047" status="PASS">
+        <test-method signature="verifySuccessfulSubmissionMsg()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:56:27 AEST" name="verifySuccessfulSubmissionMsg" finished-at="2023-02-01T09:56:35 AEST" duration-ms="7801" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySuccessfulSubmissionMsg -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:41:53 AEST" name="tearDown" finished-at="2023-01-31T23:41:53 AEST" duration-ms="431" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:56:35 AEST" name="tearDown" finished-at="2023-02-01T09:56:35 AEST" duration-ms="413" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="getDriver()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:41:53 AEST" name="getDriver" finished-at="2023-01-31T23:41:59 AEST" duration-ms="6306" status="PASS">
+        <test-method is-config="true" signature="getDriver()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:56:35 AEST" name="getDriver" finished-at="2023-02-01T09:56:46 AEST" duration-ms="11176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method signature="verifySuccessfulSubmissionMsg()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:41:59 AEST" name="verifySuccessfulSubmissionMsg" finished-at="2023-01-31T23:42:05 AEST" duration-ms="5428" status="PASS">
+        <test-method signature="verifySuccessfulSubmissionMsg()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:56:46 AEST" name="verifySuccessfulSubmissionMsg" finished-at="2023-02-01T09:56:51 AEST" duration-ms="4873" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySuccessfulSubmissionMsg -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:42:05 AEST" name="tearDown" finished-at="2023-01-31T23:42:05 AEST" duration-ms="414" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:56:51 AEST" name="tearDown" finished-at="2023-02-01T09:56:51 AEST" duration-ms="392" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="getDriver()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:42:05 AEST" name="getDriver" finished-at="2023-01-31T23:42:12 AEST" duration-ms="6918" status="PASS">
+        <test-method is-config="true" signature="getDriver()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:56:51 AEST" name="getDriver" finished-at="2023-02-01T09:57:00 AEST" duration-ms="8873" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method signature="verifySuccessfulSubmissionMsg()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:42:12 AEST" name="verifySuccessfulSubmissionMsg" finished-at="2023-01-31T23:42:15 AEST" duration-ms="3251" status="PASS">
+        <test-method signature="verifySuccessfulSubmissionMsg()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:57:00 AEST" name="verifySuccessfulSubmissionMsg" finished-at="2023-02-01T09:57:03 AEST" duration-ms="2944" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySuccessfulSubmissionMsg -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:42:15 AEST" name="tearDown" finished-at="2023-01-31T23:42:16 AEST" duration-ms="444" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:57:03 AEST" name="tearDown" finished-at="2023-02-01T09:57:04 AEST" duration-ms="365" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="getDriver()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:42:16 AEST" name="getDriver" finished-at="2023-01-31T23:42:22 AEST" duration-ms="6206" status="PASS">
+        <test-method is-config="true" signature="getDriver()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:57:04 AEST" name="getDriver" finished-at="2023-02-01T09:57:14 AEST" duration-ms="10348" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method signature="verifySuccessfulSubmissionMsg()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:42:22 AEST" name="verifySuccessfulSubmissionMsg" finished-at="2023-01-31T23:42:24 AEST" duration-ms="2369" status="PASS">
+        <test-method signature="verifySuccessfulSubmissionMsg()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:57:14 AEST" name="verifySuccessfulSubmissionMsg" finished-at="2023-02-01T09:57:32 AEST" duration-ms="17624" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySuccessfulSubmissionMsg -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.PlanitTesting@14cd1699]" started-at="2023-01-31T23:42:24 AEST" name="tearDown" finished-at="2023-01-31T23:42:25 AEST" duration-ms="431" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.PlanitTesting@42a48628]" started-at="2023-02-01T09:57:32 AEST" name="tearDown" finished-at="2023-02-01T09:57:32 AEST" duration-ms="452" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -16,7 +16,7 @@ public class PageInitializer extends BaseClass {
 		
 		hp = new HomePage();
 		cp=new ContactPage();
-		sp=new ShopPage();
+		sp=new ShopPage();		
 		CtP=new CartPage();
 		
 	}

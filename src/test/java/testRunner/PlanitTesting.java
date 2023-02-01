@@ -1,6 +1,9 @@
 package testRunner;
 
 import org.testng.annotations.Test;
+
+import pages.CartPage;
+
 import org.testng.AssertJUnit;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,15 +14,19 @@ import utilities.CommonMethod;
 
 public class PlanitTesting extends CommonMethod{
 	
+	int numFrog=2;
+	int numBunny=5;
+	int numBear=3;
+	
 	
 	@Test
-	public static void verifyErrorMessage() {
+	public void verifyErrorMessage() {
 		
 		hp.contactBtn.click();
 		cp.submitBtn.click();
 		String actualText=cp.topAlertMsg.getText();
 		String expectedText="We welcome your feedback - but we won't get it unless you complete the form correctly.";
-		AssertJUnit.assertEquals(actualText, expectedText);
+		Assert.assertEquals(actualText, expectedText);
 		
 		//populate 
 		cp.forename.sendKeys(randomFirstName());
@@ -28,13 +35,13 @@ public class PlanitTesting extends CommonMethod{
 		
 		String actualText1=cp.topMSG.getText();
 		String expectedText1="We welcome your feedback - tell it how it is.";
-		AssertJUnit.assertEquals(actualText1, expectedText1);
+		Assert.assertEquals(actualText1, expectedText1);
 		
 		
 	}
 	
 	@Test(invocationCount = 5)
-	public static void verifySuccessfulSubmissionMsg() {
+	public void verifySuccessfulSubmissionMsg() {
 		
 		hp.contactBtn.click();
 		cp.forename.sendKeys(randomFirstName());
@@ -44,22 +51,49 @@ public class PlanitTesting extends CommonMethod{
 		getWaitObject().until(ExpectedConditions.visibilityOf(cp.successAlertMsg));
 		String actualText=cp.successAlertMsg.getText();
 		String expectedText="we appreciate your feedback.";
-		AssertJUnit.assertTrue(actualText.contains(expectedText));
+		Assert.assertTrue(actualText.contains(expectedText));
 		
 	}
+	
+//	@Test
+//	public void validateCartPage() {
+//		
+//		hp.ShopBtn.click();
+//		sp.buyProduct("Stuffed Frog",numFrog);
+//		sp.buyProduct("Fluffy Bunny",numBunny);
+//		sp.buyProduct("Valentine Bear",numBear);
+//		hp.CartBtn.click();
+//		
+//		
+//		
+//	}
+	
 	
 	@Test
-	public static void validateCartPage() {
-		
+	public void validateCartPage1() {
 		hp.ShopBtn.click();
-		sp.buyProduct("Stuffed Frog",2);
-		sp.buyProduct("Fluffy Bunny",5);
-		sp.buyProduct("Valentine Bear",3);
-		System.out.println("added info");
+		hp.ShopBtn.click();
+		sp.buyProduct("Stuffed Frog",numFrog);
+		sp.buyProduct("Fluffy Bunny",numBunny);
+		sp.buyProduct("Valentine Bear",numBear);
 		hp.CartBtn.click();
 		
+		Assert.assertEquals(CtP.findItemPrice("Stuffed Frog"), 10.99);
+		Assert.assertEquals(CtP.findItemPrice("Fluffy Bunny"), 9.99);
+		Assert.assertEquals(CtP.findItemPrice("Valentine Bear"), 14.99);
+		
+		Assert.assertEquals(CtP.findItemQuantity("Stuffed Frog"), numFrog);
+		Assert.assertEquals(CtP.findItemQuantity("Fluffy Bunny"), numBunny);
+		Assert.assertEquals(CtP.findItemQuantity("Valentine Bear"), numBear);
+		
+		Assert.assertEquals(CtP.findItemSubTotal("Stuffed Frog"), CtP.findItemPrice("Stuffed Frog")*numFrog);
+		Assert.assertEquals(CtP.findItemSubTotal("Fluffy Bunny"), CtP.findItemPrice("Fluffy Bunny")*numBunny);
+		Assert.assertEquals(CtP.findItemSubTotal("Valentine Bear"), CtP.findItemPrice("Valentine Bear")*numBear);
+		
+		double subTotalSum=CtP.findItemSubTotal("Stuffed Frog")+CtP.findItemSubTotal("Fluffy Bunny")+CtP.findItemSubTotal("Valentine Bear");
+		
+		Assert.assertEquals(CtP.findTotalSum(),subTotalSum);
 		
 	}
-	
 
 }
