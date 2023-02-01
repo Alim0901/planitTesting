@@ -71,14 +71,6 @@ public class CommonMethod extends PageInitializer {
 		waitForClickability(element).click();
 	}
 
-	public static void wait(double second) {
-		try {
-			Thread.sleep((int) (second * 1000));
-		} catch (Exception e) {
-
-		}
-
-	}
 
 	public static void getTittle() {
 		driver.getTitle();
@@ -98,7 +90,6 @@ public class CommonMethod extends PageInitializer {
 		return text;	}
 
 	
-	
 	public static byte[] takeScreenshot(String filename) {
 		TakesScreenshot ts = (TakesScreenshot) getDriver();
 		byte[] picBytes = ts.getScreenshotAs(OutputType.BYTES);
@@ -114,7 +105,7 @@ public class CommonMethod extends PageInitializer {
 		return picBytes;
 	}
 
-	public static String getTimeStemp() { 
+ 	public static String getTimeStemp() { 
 		
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");

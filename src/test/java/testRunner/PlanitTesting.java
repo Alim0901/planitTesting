@@ -53,7 +53,6 @@ public class PlanitTesting extends CommonMethod{
 		Assert.assertTrue(actualText.contains(expectedText));
 		
 	}
-	
 	@Test(priority=3)
 	public void validateCartPage1() {
 		hp.ShopBtn.click();

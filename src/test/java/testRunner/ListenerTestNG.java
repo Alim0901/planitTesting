@@ -1,7 +1,9 @@
-package utilities;
+package testRunner;
 
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
+import utilities.CommonMethod;
 
 public class ListenerTestNG implements ITestListener {
 
@@ -14,8 +16,9 @@ public class ListenerTestNG implements ITestListener {
 	}
 
 	public void onTestFailure(ITestResult result) {
-				CommonMethod.takeScreenshot("FailCase");
 		
+			CommonMethod.takeScreenshot("FailCase");
+	
 	}
 
 	public void onTestSkipped(ITestResult result) {
