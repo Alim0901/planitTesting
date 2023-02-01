@@ -17,12 +17,12 @@ public class ShopPage {
 	
 	@FindBy(xpath="//*[@class='product-title ng-binding']")
 	public  List<WebElement> productNameList;
-		@FindBy(xpath="//*[@class='btn btn-success']")
-	public List<WebElement> BuyBtnList;
+	
+	@FindBy(xpath="//*[@class='btn btn-success']")
+    public List<WebElement> BuyBtnList;
 	
 	@FindBy(xpath="//*[@class='product-price ng-binding']")
 	public List<WebElement> PriceList;
-	
 	
 	
 	public  void buyProduct(String productName, int productQuantity) {
@@ -39,9 +39,7 @@ public class ShopPage {
 		}
 		
 	}
-	
-	//h4[.='Stuffed Frog']/..//a
-	
+		
 	
 	
 	

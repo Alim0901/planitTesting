@@ -18,8 +18,7 @@ public class PlanitTesting extends CommonMethod{
 	int numBunny=5;
 	int numBear=3;
 	
-	
-	@Test
+	@Test(priority=1)
 	public void verifyErrorMessage() {
 		
 		hp.contactBtn.click();
@@ -40,7 +39,7 @@ public class PlanitTesting extends CommonMethod{
 		
 	}
 	
-	@Test(invocationCount = 5)
+	@Test(priority=2,invocationCount = 5)
 	public void verifySuccessfulSubmissionMsg() {
 		
 		hp.contactBtn.click();
@@ -55,21 +54,7 @@ public class PlanitTesting extends CommonMethod{
 		
 	}
 	
-//	@Test
-//	public void validateCartPage() {
-//		
-//		hp.ShopBtn.click();
-//		sp.buyProduct("Stuffed Frog",numFrog);
-//		sp.buyProduct("Fluffy Bunny",numBunny);
-//		sp.buyProduct("Valentine Bear",numBear);
-//		hp.CartBtn.click();
-//		
-//		
-//		
-//	}
-	
-	
-	@Test
+	@Test(priority=3)
 	public void validateCartPage1() {
 		hp.ShopBtn.click();
 		hp.ShopBtn.click();

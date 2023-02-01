@@ -12,7 +12,7 @@ public class PageInitializer extends BaseClass {
 	public static ShopPage sp;
 	public static CartPage CtP;
 	
-	public static void initialize() {
+public static void initialize() {
 		
 		hp = new HomePage();
 		cp=new ContactPage();

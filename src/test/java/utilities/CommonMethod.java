@@ -27,39 +27,8 @@ public class CommonMethod extends PageInitializer {
 
 	public static void hoverOver(WebElement element) {
 		Actions act = new Actions(getDriver());
-		act.moveToElement(element).build().perform();
-	}
-	
-	public static void sendTextToAlert(String text) {
-		try {
-			Alert alert = getDriver().switchTo().alert();
-			alert.sendKeys(text);
-			alert.accept();		
-		}catch(NoAlertPresentException e){
-			e.printStackTrace();		
-		}
-	}
-	
-	public static byte[] takeScreenshot(String filename) {
-		TakesScreenshot ts = (TakesScreenshot) BaseClass.getDriver();
-		byte[] picBytes = ts.getScreenshotAs(OutputType.BYTES);
+		act.moveToElement(element).build().perform();	}	
 
-		File file = ts.getScreenshotAs(OutputType.FILE);
-		String destinationFile = Constants.screenshot_filepath + filename + getTimeStemp() + ".png";
-
-		try {
-			FileUtils.copyFile(file, new File(destinationFile));
-		} catch (Exception ex) {
-			System.out.println("Cannot take screenshot!");
-		}
-		return picBytes;
-	}
-	
-	public static String getTimeStemp() {
-		Date date = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
-		return sdf.format(date.getTime());
-	}
 	
 	public static WebDriverWait getWaitObject() {
 		WebDriverWait wait = new WebDriverWait(BaseClass.getDriver(), Constants.explicit_wait_time);
@@ -70,7 +39,6 @@ public class CommonMethod extends PageInitializer {
 		return getWaitObject().until(ExpectedConditions.elementToBeClickable(element));
 	}
 
-	public static boolean isDemoMode = true;
 	public static Faker faker = new Faker();
 
 	public static String randomFirstName() {
@@ -79,7 +47,6 @@ public class CommonMethod extends PageInitializer {
 	}
 
 	public static String randomLastName() {
-		//faker = new Faker();
 
 		return faker.name().lastName();
 	}
@@ -95,36 +62,13 @@ public class CommonMethod extends PageInitializer {
 		
 	}
 
-	/*
-	 * 
-	 * This method for sending String(text) to the element we have given.
-	 * 
-	 * @params: Webelement element = it is accepting the webelement where we are
-	 * sending the text String text = it is the parameter tha we are sending the
-	 * String
-	 */
 	public static void sendKey(WebElement element, String text) {
 		element.clear();
 		element.sendKeys(text);
 	}
 
-	/*
-	 * This method for clicking the given element
-	 * 
-	 */
 	public static void click(WebElement element) {
 		waitForClickability(element).click();
-	}
-
-	/*
-	 * This method for assertion check the title
-	 */
-	public static void assertTitle(String text) {
-		assertTrue(driver.getTitle().contains(text));
-
-		/*
-		 * This is just wait from mili sec. to sec
-		 */
 	}
 
 	public static void wait(double second) {
@@ -136,63 +80,7 @@ public class CommonMethod extends PageInitializer {
 
 	}
 
-	/*
-	 * this is indicator for element blinks
-	 */
-	public static void highLightElementMethod(WebElement element) {
-
-		try {
-			if (isDemoMode) {
-				for (int i = 0; i <= 2; i++) {
-
-					// Create object of a JavascriptExecutor interface
-					JavascriptExecutor js = (JavascriptExecutor) driver;
-					// use executeScript() method and pass the arguments
-					// Here i pass values based on css style. Yellow background color with solid red
-					// color border.
-					js.executeScript(
-							"arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",
-							element);
-
-					wait(0.2);
-
-					// Create object of a JavascriptExecutor interface
-					js = (JavascriptExecutor) driver;
-					// use executeScript() method and pass the arguments
-					// Here i pass values based on css style. Yellow background color with solid red
-					// color border.
-					js.executeScript(
-							"arguments[0].setAttribute('style', 'background: red; border: 2px solid yellow;');",
-							element);
-
-					wait(0.2);
-
-					// Create object of a JavascriptExecutor interface
-					js = (JavascriptExecutor) driver;
-					// use executeScript() method and pass the arguments
-					// Here i pass values based on css style. Yellow background color with solid red
-					// color border.
-					js.executeScript("arguments[0].setAttribute('style', 'background: white; border: 2px solid red;');",
-							element);
-				}
-			}
-		} catch (Exception e) {
-
-		}
-
-	}
-
-	/*
-	 * this is getting the title
-	 */
 	public static void getTittle() {
-		driver.getTitle();
-	}
-
-	/*
-	 * this is getting the title
-	 */
-	public static void getTittlez() {
 		driver.getTitle();
 	}
 
@@ -200,87 +88,13 @@ public class CommonMethod extends PageInitializer {
 		driver.get(url);
 	}
 
-	// methods checks if radio/checkbox is enabled and clicks on it
-	public static void clickRadioOrCheckbox(List<WebElement> radioOrcheckbox, String valueToBeSelected) {
-		String actualValue;
-		for (WebElement el : radioOrcheckbox) {
-			actualValue = el.getAttribute("value").trim();
-			if (el.isEnabled() && actualValue.equals(valueToBeSelected)) {
-				el.click();
-				break;
-			}
-		}
-	}
-	
-
-
-	public static void selectDropDownValue(WebElement dropDownElement, String textToSelect) {
-		try {
-			Select select = new Select(dropDownElement);
-			List<WebElement> options = select.getOptions();
-			for (WebElement el : options) {
-				if (el.getText().equals(textToSelect)) {
-					select.selectByVisibleText(textToSelect);
-					break;
-				}
-			}
-		} catch (UnexpectedTagNameException e) {
-			e.printStackTrace();
-		}
-	}
-
-	public static void selectDropDownIndex(WebElement dropDownElement, int indexValue) {
-		try {
-			Select select = new Select(dropDownElement);
-			int size = select.getOptions().size();
-			if (size > indexValue) {
-				select.selectByIndex(indexValue);
-			}
-		} catch (UnexpectedTagNameException e) {
-			e.printStackTrace();
-		}
-	}
-
 	public static WebElement waitForVisibility(WebElement element) {
 		return getWaitObject().until(ExpectedConditions.visibilityOf(element));
 	}
 
-	// js executer
-	public static JavascriptExecutor getJSObject() {
-		JavascriptExecutor js = (JavascriptExecutor) getDriver();
-		return js;
-	}
-
-	public static void jsClick(WebElement element) {
-		
-		getJSObject().executeScript("arguments[0].click();", element);
-		
-	}
-	
 	public static String getText(WebElement webelement) {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();  
 		String text = (String) js.executeScript("return arguments[0].value", webelement);
 		return text;	}
 
-	
-	
-	public static int number;
-	
-	public static int getNumber(String input) {
-		
-		//int number=0;
-		 // String str = input;
-	      try{
-	           number = Integer.parseInt(input);
-	         // System.out.println(number); // output = 25
-	      }
-	      catch (NumberFormatException ex){
-	          ex.printStackTrace();
-	      }
-		return number;
-	}
-
-
-	
-	
 }

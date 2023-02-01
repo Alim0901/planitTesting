@@ -9,7 +9,7 @@ import utilities.BaseClass;
 public class ContactPage {
 	public ContactPage() {
 		PageFactory.initElements(BaseClass.getDriver(), this);
-	}
+  }
 	
 	@FindBy(xpath="//*[@class='btn-contact btn btn-primary']")
 	public WebElement submitBtn;

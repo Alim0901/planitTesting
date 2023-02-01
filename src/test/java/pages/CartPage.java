@@ -6,9 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.BaseClass;
-import utilities.CreateNumbersOnlyStr;
 
-public class CartPage {
+  public class CartPage {
 
 	public CartPage() {
 		PageFactory.initElements(BaseClass.getDriver(), this);
